@@ -2,12 +2,14 @@
 
 namespace App\Models;
 
+use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Apartament extends Model
 {
-    use HasFactory;
+    use  HasFactory, Searchable;
+
     protected $fillable = [
         'name',
         'price',
@@ -16,5 +18,11 @@ class Apartament extends Model
         'storeys',
         'garages'
     ];
+
+
+    public function searchableAs()
+    {
+        return 'name';
+    }
 
 }
