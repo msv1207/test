@@ -1,8 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ApartamentController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,5 +15,5 @@ use App\Http\Controllers\ApartamentController;
 */
 
 Route::middleware('api')->group(function () {
-   Route::post('/search', [ApartamentController::class, 'search'])->name('apartment.search');
+    Route::post('/search', [ApartamentController::class, 'search'])->name('apartment.search');
 });

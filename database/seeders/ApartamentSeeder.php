@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Apartament;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class ApartamentSeeder extends Seeder
@@ -87,6 +86,5 @@ class ApartamentSeeder extends Seeder
             'storeys'=>'2',
             'garages'=>'2',
         ]);
-
     }
 }

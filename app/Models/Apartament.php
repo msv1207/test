@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
-use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
 
 class Apartament extends Model
 {
@@ -16,13 +16,11 @@ class Apartament extends Model
         'bedrooms',
         'bathrooms',
         'storeys',
-        'garages'
+        'garages',
     ];
-
 
     public function searchableAs()
     {
         return 'name';
     }
-
 }

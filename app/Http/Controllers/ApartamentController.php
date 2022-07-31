@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Services\SearchService;
-use Illuminate\Http\Request;
 use App\Http\Requests\SearchRequest;
+use App\Services\SearchService;
 
 class ApartamentController extends Controller
 {
@@ -12,7 +11,7 @@ class ApartamentController extends Controller
 
     public function __construct(SearchService $searchService)
     {
-        $this->searchService=$searchService;
+        $this->searchService = $searchService;
     }
 
     public function search(SearchRequest $request)
@@ -21,5 +20,4 @@ class ApartamentController extends Controller
 
         return $response;
     }
-
 }
